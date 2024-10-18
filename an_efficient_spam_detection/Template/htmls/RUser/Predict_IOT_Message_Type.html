@@ -1,0 +1,112 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICT IOT MESSAGE TYPE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="568" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter IOT Message ID Here </div></td>
+                                    <td><input type="text" name="Message_Id" placeholder="Enter IOT Message ID"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter Message_Date </div></td>
+                                    <td><input type="text" name="Message_Date" placeholder="Enter Message Date"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center"><span class="style4 style2">Enter IOT Message Details Here</span></div></td>
+                                    <td width="269"><textarea name="IOT_Message" cols="40" rows="10" placeholder="Enter IOT Message"></textarea></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>
+            <input name="submit" type="submit" class="style1" value="Predict">
+        </p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table border="0" align="center" >
+                                    <tr><td width="246" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTED IOT MESSAGE TYPE</span> :: </div></td>
+
+
+
+                                        <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

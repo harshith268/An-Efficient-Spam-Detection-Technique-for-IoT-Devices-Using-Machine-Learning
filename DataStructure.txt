@@ -1,0 +1,25 @@
+An Efficient Spam Detection Technique for IoT Devices Using Machine Learning
+
+spam detection,Machine Learning,DOS Attacks,IOT Data,REFIT
+
+
+IEEE Transactions on Industrial Informatics,Volume:17,Issue:2,Issue Date:Feb.2021
+
+An_Efficient_Spam_Detection 
+
+
+
+an_efficient_spam_detection 
+
+
+Spam_Prediction
+
+Message_Id
+IOT_Message
+Message_Date
+Prediction
+
+
+Spam_Prediction,detection_ratio,detection_accuracy
+
+
